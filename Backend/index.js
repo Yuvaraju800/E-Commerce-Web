@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("./db/config");
-const User = require("./db/user");
+const User = require("./db/User");
 const Product = require("./db/Product");
 //json web token authentication
 const Jwt=require('jsonwebtoken');
