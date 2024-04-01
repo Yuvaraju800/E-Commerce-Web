@@ -16,7 +16,7 @@ const AddProduct = () => {
         console.warn(name,price,category,company);
         //fetch api
         const userId=JSON.parse(localStorage.getItem("user"))._id;
-        let result=await fetch("https://e-commerce-web-8.onrender.com/add-product",{
+        let result=await fetch("https://e-commerce-web-7.onrender.com/add-product",{
         method:"POST",
         body:JSON.stringify({name,price,category,company,userId}),
         headers:{

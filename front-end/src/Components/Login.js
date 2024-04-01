@@ -13,7 +13,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         console.warn("email,password", email, password);
-        let result = await fetch("https://e-commerce-web-8.onrender.com/login", {
+        let result = await fetch("https://e-commerce-web-7.onrender.com/login", {
             method: "post",
             body: JSON.stringify({ email, password }),
             headers: {

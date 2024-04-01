@@ -14,7 +14,7 @@ import {useNavigate} from "react-router-dom";
     const collectData=async ()=>{
         console.warn(name,email,password);
         //INTIGRATE SIGNUP API IN REACT JS
-        let result=await fetch("https://e-commerce-web-8.onrender.com/register",{
+        let result=await fetch("https://e-commerce-web-7.onrender.com/register",{
             method:"POST",
             body:JSON.stringify({name:name,email:email,password:password}),
             headers:{
