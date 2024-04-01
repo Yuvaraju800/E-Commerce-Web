@@ -14,7 +14,7 @@ const UpdateProduct = () => {
         getProductDetails();
     },[]);
     const getProductDetails=async ()=>{
-        let result=await fetch(`http://localhost:5000/product/${params.id}`);
+        let result=await fetch(`https://e-commerce-web-8.onrender.com/product/${params.id}`);
         result=await result.json();
         console.warn(result);
         setName(result.name);
@@ -25,7 +25,7 @@ const UpdateProduct = () => {
     }
     const updateProduct=async ()=>{
     console.warn(name,price,category,company);
-    let result=await fetch(`http://localhost:5000/product/${params.id}`,{
+    let result=await fetch(`https://e-commerce-web-8.onrender.com/product/${params.id}`,{
         method:"PUT",
         body:JSON.stringify({name,price,category,company}),
         headers:{

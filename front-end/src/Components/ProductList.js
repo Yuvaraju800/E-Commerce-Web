@@ -8,7 +8,7 @@ const ProductList = () => {
         getProducts();
         },[]);
         const getProducts=async ()=>{
-            let result= await fetch("http://localhost:5000/product-list",{
+            let result= await fetch("/product-list",{
               headers:{
                 authorization:JSON.parse(localStorage.getItem("token"))
               }
@@ -19,7 +19,7 @@ const ProductList = () => {
         }
         // console.warn("products",products);
         const deleteProduct=async (id)=>{
-           let result= await fetch(`http://localhost:5000/product/${id}`,{
+           let result= await fetch(`/product/${id}`,{
                 method:"DELETE"
 
             });
@@ -32,7 +32,7 @@ const ProductList = () => {
             console.warn(event.target.value);
             let key=event.target.value;
             if(key){
-              let result=await fetch(`http://localhost:5000/search/${key}`);
+              let result=await fetch(`/search/${key}`);
               result=await result.json();
               if(result){
                   setProducts(result);
